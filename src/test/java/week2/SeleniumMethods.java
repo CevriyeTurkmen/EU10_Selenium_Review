@@ -10,14 +10,19 @@ public class SeleniumMethods {
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
 
-        driver.get("www.google.com");
-        driver.get("www.cydeo.com");
+        driver.get("https://www.google.com");
+        driver.get("https://www.cydeo.com");
 
         driver.navigate().back();
         driver.navigate().forward();
         driver.navigate().refresh();
+        driver.navigate().to("https://www.ebay.com");
 
+        System.out.println("driver.getTitle() = " + driver.getTitle());
 
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+
+        driver.close();
 
     }
 
